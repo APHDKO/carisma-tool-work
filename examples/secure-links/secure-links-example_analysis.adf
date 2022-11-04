@@ -1,0 +1,13 @@
+<Analysis>
+  <name>secure-links-example_analysis</name>
+  <modelFile>/secure-links-example/secure-links-example.uml</modelFile>
+  <modelType>UML2</modelType>
+  <checks>
+    <Check>
+      <checkID>carisma.check.staticcheck.securelinks</checkID>
+      <enabled>true</enabled>
+      <parameters/>
+    </Check>
+  </checks>
+  <selectedEditor>Default Eclipse Editor</selectedEditor>
+</Analysis>

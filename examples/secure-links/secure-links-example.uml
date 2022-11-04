@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLsec="http://www.umlsec.de/profiles/UMLsec" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_P-NqoFqcEe2bP5Yyo1fERQ" name="secure-links-example">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_QCH6QFqcEe2bP5Yyo1fERQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_diLl8FqcEe2bP5Yyo1fERQ" name="Package">
+      <packagedElement xmi:type="uml:Node" xmi:id="_VQn_cFqcEe2bP5Yyo1fERQ" name="Client">
+        <deployment xmi:type="uml:Deployment" xmi:id="_YyoGkFqcEe2bP5Yyo1fERQ" client="_VQn_cFqcEe2bP5Yyo1fERQ" supplier="_WsZZ4FqcEe2bP5Yyo1fERQ" deployedArtifact="_WsZZ4FqcEe2bP5Yyo1fERQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Node" xmi:id="_VgK3UFqcEe2bP5Yyo1fERQ" name="Server">
+        <deployment xmi:type="uml:Deployment" xmi:id="_ZVgKIFqcEe2bP5Yyo1fERQ" client="_VgK3UFqcEe2bP5Yyo1fERQ" supplier="_W9r-MFqcEe2bP5Yyo1fERQ" deployedArtifact="_W9r-MFqcEe2bP5Yyo1fERQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_W9r-MFqcEe2bP5Yyo1fERQ" name="Artifact2" fileName=""/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_WsZZ4FqcEe2bP5Yyo1fERQ" name="Artifact1" fileName=""/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_bDn40FqcEe2bP5Yyo1fERQ" name="dependency" client="_WsZZ4FqcEe2bP5Yyo1fERQ" supplier="_W9r-MFqcEe2bP5Yyo1fERQ"/>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_XQ84cFqcEe2bP5Yyo1fERQ" name="CommunicationPath1" memberEnd="_XRBw8FqcEe2bP5Yyo1fERQ _XRo08FqcEe2bP5Yyo1fERQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XQ_7wFqcEe2bP5Yyo1fERQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XRAi0FqcEe2bP5Yyo1fERQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_XRBw8FqcEe2bP5Yyo1fERQ" name="node3" type="_VgK3UFqcEe2bP5Yyo1fERQ" association="_XQ84cFqcEe2bP5Yyo1fERQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_XRo08FqcEe2bP5Yyo1fERQ" name="node2" type="_VQn_cFqcEe2bP5Yyo1fERQ" association="_XQ84cFqcEe2bP5Yyo1fERQ"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gK9JkFqdEe2bP5Yyo1fERQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gK9woFqdEe2bP5Yyo1fERQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="platform:/plugin/carisma.profile.umlsec/profile/UMLsec.profile.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLsec:call xmi:id="_qQyIIFxgEe2X9efbQ4fn7g" base_Dependency="_bDn40FqcEe2bP5Yyo1fERQ"/>
+  <UMLsec:secrecy xmi:id="_tP92EFxgEe2X9efbQ4fn7g" base_Dependency="_bDn40FqcEe2bP5Yyo1fERQ"/>
+  <UMLsec:securelinks xmi:id="_oCcI0FyCEe2X9efbQ4fn7g" base_Package="_diLl8FqcEe2bP5Yyo1fERQ"/>
+  <UMLsec:encrypted xmi:id="_wpgFQFyCEe2X9efbQ4fn7g" base_CommunicationPath="_XQ84cFqcEe2bP5Yyo1fERQ"/>
+</xmi:XMI>
