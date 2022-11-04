@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLsec="http://www.umlsec.de/profiles/UMLsec" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_d3DiYFqfEe2bP5Yyo1fERQ" name="secure-dependency-example">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_d3XEYFqfEe2bP5Yyo1fERQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_fbYb4FqfEe2bP5Yyo1fERQ" name="Package">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_PDjuMFwmEe2X9efbQ4fn7g" annotatedElement="_irapQFqfEe2bP5Yyo1fERQ _i8B4IFqfEe2bP5Yyo1fERQ">
+        <body>&lt;&lt;critical>>
+secrecy = []
+integrity = []
+high = [random(): Real]
+fresh = []
+authenticity = []</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_gqwZEFqfEe2bP5Yyo1fERQ" name="RandomNumber">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_tMn-MFqfEe2bP5Yyo1fERQ" name="random">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bh8A8FqmEe2bP5Yyo1fERQ" type="_UTAxkFqlEe2bP5Yyo1fERQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_irapQFqfEe2bP5Yyo1fERQ" name="RandomGenerator">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_6Em9QFqfEe2bP5Yyo1fERQ" name="random">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fE2HAFqmEe2bP5Yyo1fERQ" type="_UTAxkFqlEe2bP5Yyo1fERQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_i8B4IFqfEe2bP5Yyo1fERQ" name="KeyGenerator">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_kZH2UFqhEe2bP5Yyo1fERQ" name="newKey">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_W5LtIFqmEe2bP5Yyo1fERQ" type="_SXECQFqlEe2bP5Yyo1fERQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_jD9IQFqjEe2bP5Yyo1fERQ" client="_i8B4IFqfEe2bP5Yyo1fERQ" supplier="_gqwZEFqfEe2bP5Yyo1fERQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_teso0FqjEe2bP5Yyo1fERQ" client="_irapQFqfEe2bP5Yyo1fERQ" supplier="_gqwZEFqfEe2bP5Yyo1fERQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_SXECQFqlEe2bP5Yyo1fERQ" name="Key"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_UTAxkFqlEe2bP5Yyo1fERQ" name="Real"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xqvIQFqfEe2bP5Yyo1fERQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xqvIQVqfEe2bP5Yyo1fERQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="platform:/plugin/carisma.profile.umlsec/profile/UMLsec.profile.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLsec:critical xmi:id="_2ZZPwFqfEe2bP5Yyo1fERQ" base_Class="_irapQFqfEe2bP5Yyo1fERQ" base_Classifier="_irapQFqfEe2bP5Yyo1fERQ">
+    <high>random(): Real</high>
+  </UMLsec:critical>
+  <UMLsec:critical xmi:id="__f3FAFqfEe2bP5Yyo1fERQ" base_Class="_i8B4IFqfEe2bP5Yyo1fERQ" base_Classifier="_i8B4IFqfEe2bP5Yyo1fERQ">
+    <high>random(): Real</high>
+  </UMLsec:critical>
+  <UMLsec:call xmi:id="_lK18QFqjEe2bP5Yyo1fERQ" base_Dependency="_jD9IQFqjEe2bP5Yyo1fERQ"/>
+  <UMLsec:high xmi:id="_lK3xcFqjEe2bP5Yyo1fERQ" base_Dependency="_jD9IQFqjEe2bP5Yyo1fERQ"/>
+  <UMLsec:securedependency xmi:id="_eUiKwFquEe2a9JN_-QGXTA" base_Package="_d3DiYFqfEe2bP5Yyo1fERQ"/>
+  <UMLsec:securedependency xmi:id="_N6P8wFwmEe2X9efbQ4fn7g" base_Package="_fbYb4FqfEe2bP5Yyo1fERQ"/>
+</xmi:XMI>
